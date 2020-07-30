@@ -1,0 +1,96 @@
+body {
+  font-family: helvetica neue, arial, sans serif;
+  background: #898D8D;
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 80px auto 40px;
+  vertical-align: middle;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: Avenir;
+  background-color: #8FE2B0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mapContainer {
+  display: flex;
+  padding-top: 165px;
+  color: black
+}
+
+#googleMap {
+  width: 100%;
+  height: 100%;
+  flex-grow: 2;
+  color: black
+}
+
+aside {
+  width: 50%;
+  background-color: white;
+  flex-grow: 1;
+  text-align: left;
+  padding: 10px;
+}
+
+a {
+  color: white;
+  font-family:helvetica neue, arial, sans serif;
+}
+
+form {
+  padding: 190px;
+/*   overflow: scroll; */
+  color: white;
+}
+
+.one {
+  background: #8FE2B0;
+  height: 245px;
+  display: block;
+}
+
+
+
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: none;
+}
+
+.gm-style img{
+    max-width:none;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  height 20px;
+  
+}
+input{
+  line-height: 20px;
+}
+
+#go{
+  width: 70px;
+    height: 35px;
+  font-family: helvetica neue, arial, sans serif;
+  background: #8FE2B0;
+    color: white;
+  border: none;
+}
