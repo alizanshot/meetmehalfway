@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meet Me Halfway</title>
+    
+    <script>
+      function mapsLoaded() {
+        console.log("maps library loaded");
+      }
+    </script>
 
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF8Z38XyqixhMXDfyLcbYtor3r3GDWtIg&callback=mapsLoaded&libraries=places"
+      type="text/javascript"
+    ></script>
+    <script src="/geocode.js"></script>
+  </head>
+  <body>
+<div class="one">
+  
+     <img src="https://cdn.glitch.com/cbc37978-87a2-4777-849f-e4c08f4313ee%2Fmeet%20me%20halfway%20logo-01.png?v=1596091218690" alt="Meet Me Halfway" width="415" height="215">
+<!--     <h1>Meet Me Halfway</h1> -->
+  </div>
+  
+    <form action="/map.html">
+      <p>
+       <b>FIND US A RESTAURANT</b> 
+      </p>
+
+      <input type="text" id="address1" name="address1" size="40" />
+      <input type="button" id="go" value="Let's Eat" />
+      <input type="text" id="address2" name="address2" size="40" />
+
+      <p>
+        <b>HALFWAY BETWEEN US</b>
+      </p>
+    </form>
+
+    <footer></footer>
+
+    <script>
+      function init() {
+        var input1 = document.getElementById("address1");
+        var autocomplete = new google.maps.places.Autocomplete(input1);
+        var input2 = document.getElementById("address2");
+        var autocomplete = new google.maps.places.Autocomplete(input2);
+        
+        
+        document.getElementById("go").addEventListener("click", () => {
+          const geocoder_ = new google.maps.Geocoder();
+
+          geocodeAddress(geocoder_, input1.value, input2.value);
+        })
+      }
+
+      google.maps.event.addDomListener(window, "load", init);
+    </script>
+    
+  </body>
+</html>
